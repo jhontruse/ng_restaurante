@@ -1,217 +1,1211 @@
-/* sm - Móviles grandes */
-@media (min-width: 640px) {
-}
-
-/* md - Tablets */
-@media (min-width: 768px) {
-}
-
-/* lg - Laptops */
-@media (min-width: 1024px) {
+/* Extra extra large - Pantallas grandes */
+@media (min-width: 1400px) {
   .contenedor {
-    border: 1px solid #9fff00;
     width: var(--card-width);
     height: var(--card-height);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: space-evenly;
     justify-content: center;
     align-items: center;
+
   }
 
-  .contenedorWallpaper {
+  .contenedor_wallpaper {
     width: 50%;
     height: var(--card-height);
-    position: relative;
-    background: linear-gradient(
-      to bottom,
-      rgba(28, 16, 8, 0.3),
-      rgba(28, 16, 8, 0.2)
-    ), url('/assets/img/login/wallpaper.png') center center / cover no-repeat;
+    background-image: url("/assets/img/login/wallpaper.png");
+    background-size: cover; /* cubre todo el contenedor */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+
   }
 
-  .contenedorWallpaper::before {
-    inset: 0; /* top/right/bottom/left = 0 */
-    background-color: rgba(0, 0, 0, 0.10);
-    z-index: 1;
-  }
-
-  .contenedorWallpaper h1 {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 700;
-    z-index: 2;
+  .contenedor_Wallpaper_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.9rem;
+    margin: 0 0 10px 0;
     padding: 0;
     border: 0;
-    margin: 0px 0px 15px 0px;
+    color: white;
   }
 
-  .contenedorWallpaper p {
-    color: #fff;
+  .contenedor_Wallpaper_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_form {
+    width: 50%;
+    height: var(--card-height);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+
+  .contenedor_form_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.0rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     font-size: 1.2rem;
-    font-weight: 400;
-    z-index: 2;
+    color: rgb(190, 55, 94);
+    margin: 0 0 15px 0;
     padding: 0;
-    border: 0;
-    margin: 0;
+
   }
 
-  .contenedorWallpaper img {
+  .contenedor_form_formulario {
+    width: 60%;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_form_formulario_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: center;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin: 0 0 15px 0;
+    padding: 0;
+
   }
 
-  .contenedorForm {
+  .contenedor_form_formulario_titulo_inputs {
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario_titulo_inputs label {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: rgb(190, 55, 94);
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield {
+    width: 100%;
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield input {
+    width: 100%;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .contenedor_form_formulario_titulo_inputs small {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.7rem;
+    color: red;
+  }
+
+  .contenedor_form_formulario_titulo_extra {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 0 15px 0;
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox {
+    width: 50%;
+
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox label {
+    margin: 0 0 0 8px;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .contenedor_form_formulario_titulo_extra_recuerda {
+    text-align: right;
+    width: 50%;
+    margin: 0 0 0 0;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: rgb(190, 55, 94);
+    cursor: pointer;
+  }
+
+  .contenedor_form_formulario_titulo_boton {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .contenedor_form_soporte {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin: 0 0 25px 0;
+  }
+
+  .contenedor_form_soporte span {
+    color: rgb(190, 55, 94);
+    font-weight: 700;
+  }
+
+  .contenedor_form_footer {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.7rem;
+    margin: 0 0 20px 0;
+  }
+}
+
+/* Extra large - Desktops */
+@media (min-width: 1200px) {
+  .contenedor {
+    width: var(--card-width);
+    height: var(--card-height);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_wallpaper {
     width: 50%;
     height: var(--card-height);
-    border: 1px solid #c710ba;
+    background-image: url("/assets/img/login/wallpaper.png");
+    background-size: cover; /* cubre todo el contenedor */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
-    align-content: center;
-    justify-content: flex-start;
-    padding-top: 10%;
-    background: rgb(255, 255, 255);
-  }
-
-  .contenedorForm .svg-logo {
-    width: 60px;
-    height: 60px;
-    margin: 0px 0px 20px 0px;
-  }
-
-  .contenedorForm .titulo {
-    font-size: 1.5rem; /* 24px */
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: #1c1008;
-    letter-spacing: 0.3px;
-    margin: 0px 0px 20px 0px;
-  }
-
-  .contenedorForm .subtitulo {
-    font-size: 1.1rem; /* 14px */
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: #9e7b6a;
-    letter-spacing: 0.2px;
-    margin: 0px 0px 20px 0px;
-  }
-
-  .contenedorForm .formulario {
-    width: 100%;
-    height: 50%;
-    border: 1px solid #09ff2d;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    align-content: center;
     justify-content: center;
-    margin: 0px 0px 20px 0px;
+    align-items: center;
+
   }
 
-  .contenedorForm .formulario form {
+  .contenedor_Wallpaper_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.9rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_Wallpaper_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_form {
+    width: 50%;
+    height: var(--card-height);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  .contenedor_form_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.0rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: rgb(190, 55, 94);
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario {
     width: 60%;
-    height: 100%;
-    border: 1px solid #3700bd;
-  }
-
-  .cont_1 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .cont_1 p {
-    font-size: 1.5rem; /* 28px */
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 700;
-    color: #1c1008;
-    letter-spacing: 0.3px;
-  }
-
-  .cont_2 {
-    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: flex-start;
-    align-content: center;
     justify-content: center;
-    border: 1px solid #0e1bf3;
-    margin-bottom: 20px;
+    align-items: center;
+
   }
 
-  p-iconfield {
+  .contenedor_form_formulario_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: center;
     width: 100%;
-    display: block;
+    margin: 0 0 15px 0;
+    padding: 0;
+
   }
 
-  p-iconfield input {
+  .contenedor_form_formulario_titulo_inputs {
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario_titulo_inputs label {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: rgb(190, 55, 94);
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield {
     width: 100%;
   }
 
-  label {
+  .contenedor_form_formulario_titulo_inputs p-iconfield input {
+    width: 100%;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
   }
 
-  .form-input::placeholder {
+  .contenedor_form_formulario_titulo_inputs small {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.7rem;
+    color: red;
   }
 
-  .cont_3 {
+  .contenedor_form_formulario_titulo_extra {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
-    align-content: center;
     justify-content: space-between;
-    border: 1px solid #aa1324;
-    margin-bottom: 20px;
+    align-items: center;
+
+    margin: 0 0 15px 0;
   }
 
-  .cont_3 div label {
-    margin-left: 5px;
+  .contenedor_form_formulario_titulo_extra_checkbox {
+    width: 50%;
+
   }
 
-  .contenedorForm .soporte, .contenedorForm .footer {
-    margin: 0px 0px 20px 0px;
+  .contenedor_form_formulario_titulo_extra_checkbox label {
+    margin: 0 0 0 8px;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
   }
 
-  .soporte {
+  .contenedor_form_formulario_titulo_extra_recuerda {
+    text-align: right;
+    width: 50%;
+    margin: 0 0 0 0;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: rgb(190, 55, 94);
+    cursor: pointer;
   }
 
-  .contenedorForm .soporte span {
+  .contenedor_form_formulario_titulo_boton {
+    width: 100%;
+    margin: 0 0 20px 0;
   }
 
-  .footer {
+  .contenedor_form_soporte {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin: 0 0 25px 0;
+  }
 
+  .contenedor_form_soporte span {
+    color: rgb(190, 55, 94);
+    font-weight: 700;
+  }
+
+  .contenedor_form_footer {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.7rem;
+    margin: 0 0 20px 0;
   }
 }
 
-/* xl - Desktops */
-@media (min-width: 1280px) {
-  .body {
-    border: 1px solid #000bff;
+/* Large - Laptops */
+@media (min-width: 992px) {
+  .contenedor {
+    width: var(--card-width);
+    height: var(--card-height);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_wallpaper {
+    width: 50%;
+    height: var(--card-height);
+    background-image: url("/assets/img/login/wallpaper.png");
+    background-size: cover; /* cubre todo el contenedor */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_Wallpaper_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.9rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_Wallpaper_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_form {
+    width: 50%;
+    height: var(--card-height);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+
+  .contenedor_form_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.0rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: rgb(190, 55, 94);
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario {
+    width: 60%;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_form_formulario_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario_titulo_inputs {
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario_titulo_inputs label {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: rgb(190, 55, 94);
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield {
+    width: 100%;
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield input {
+    width: 100%;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .contenedor_form_formulario_titulo_inputs small {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.7rem;
+    color: red;
+  }
+
+  .contenedor_form_formulario_titulo_extra {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 0 15px 0;
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox {
+    width: 50%;
+
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox label {
+    margin: 0 0 0 8px;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .contenedor_form_formulario_titulo_extra_recuerda {
+    text-align: right;
+    width: 50%;
+    margin: 0 0 0 0;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: rgb(190, 55, 94);
+    cursor: pointer;
+  }
+
+  .contenedor_form_formulario_titulo_boton {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .contenedor_form_soporte {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin: 0 0 25px 0;
+  }
+
+  .contenedor_form_soporte span {
+    color: rgb(190, 55, 94);
+    font-weight: 700;
+  }
+
+  .contenedor_form_footer {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.7rem;
+    margin: 0 0 20px 0;
   }
 }
 
-/* 2xl - Pantallas grandes */
-@media (min-width: 1536px) {
-  .body {
+/* Medium - Tablets */
+@media (min-width: 768px) {
+  .contenedor {
+    width: var(--card-width);
+    height: var(--card-height);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_wallpaper {
+    width: 50%;
+    height: var(--card-height);
+    background-image: url("/assets/img/login/wallpaper.png");
+    background-size: cover; /* cubre todo el contenedor */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_Wallpaper_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.9rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_Wallpaper_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_form {
+    width: 50%;
+    height: var(--card-height);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+
+  .contenedor_form_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.0rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: rgb(190, 55, 94);
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario {
+    width: 60%;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_form_formulario_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario_titulo_inputs {
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario_titulo_inputs label {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: rgb(190, 55, 94);
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield {
+    width: 100%;
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield input {
+    width: 100%;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .contenedor_form_formulario_titulo_inputs small {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.7rem;
+    color: red;
+  }
+
+  .contenedor_form_formulario_titulo_extra {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 0 15px 0;
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox {
+    width: 50%;
+
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox label {
+    margin: 0 0 0 8px;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .contenedor_form_formulario_titulo_extra_recuerda {
+    text-align: right;
+    width: 50%;
+    margin: 0 0 0 0;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: rgb(190, 55, 94);
+    cursor: pointer;
+  }
+
+  .contenedor_form_formulario_titulo_boton {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .contenedor_form_soporte {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin: 0 0 25px 0;
+  }
+
+  .contenedor_form_soporte span {
+    color: rgb(190, 55, 94);
+    font-weight: 700;
+  }
+
+  .contenedor_form_footer {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.7rem;
+    margin: 0 0 20px 0;
+  }
+}
+
+/* Small - Móviles */
+@media (min-width: 576px) {
+  .contenedor {
+    width: var(--card-width);
+    height: var(--card-height);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_wallpaper {
+    width: 50%;
+    height: var(--card-height);
+    background-image: url("/assets/img/login/wallpaper.png");
+    background-size: cover; /* cubre todo el contenedor */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_Wallpaper_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.9rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_Wallpaper_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_form {
+    width: 50%;
+    height: var(--card-height);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+
+  .contenedor_form_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.0rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: rgb(190, 55, 94);
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario {
+    width: 60%;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedor_form_formulario_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario_titulo_inputs {
+    width: 100%;
+    margin: 0 0 15px 0;
+    padding: 0;
+
+  }
+
+  .contenedor_form_formulario_titulo_inputs label {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: rgb(190, 55, 94);
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield {
+    width: 100%;
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield input {
+    width: 100%;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .contenedor_form_formulario_titulo_inputs small {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.7rem;
+    color: red;
+  }
+
+  .contenedor_form_formulario_titulo_extra {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 0 15px 0;
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox {
+    width: 50%;
+
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox label {
+    margin: 0 0 0 8px;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  .contenedor_form_formulario_titulo_extra_recuerda {
+    text-align: right;
+    width: 50%;
+    margin: 0 0 0 0;
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: rgb(190, 55, 94);
+    cursor: pointer;
+  }
+
+  .contenedor_form_formulario_titulo_boton {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .contenedor_form_soporte {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin: 0 0 25px 0;
+  }
+
+  .contenedor_form_soporte span {
+    color: rgb(190, 55, 94);
+    font-weight: 700;
+  }
+
+  .contenedor_form_footer {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.7rem;
+    margin: 0 0 20px 0;
+  }
+}
+
+/* Extra small - Móviles pequeños */
+@media (max-width: 575px) {
+  .contenedor {
+    width: 100%;
+    height: var(--card-height);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
     border: 1px solid red;
+  }
+
+  .contenedor_wallpaper {
+    width: 100%;
+    height: 20%;
+    background-image: url("/assets/img/login/wallpaper.png");
+    background-size: cover; /* cubre todo el contenedor */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0;
+    border: 1px solid red;
+  }
+
+  .contenedor_Wallpaper_titulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_Wallpaper_subtitulo {
+    font-family: var(--type-letter);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    border: 0;
+    color: white;
+  }
+
+  .contenedor_form {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+  }
+
+
+
+  .contenedor_form_titulo {
+  }
+
+  .contenedor_form_subtitulo {
+  }
+
+  .contenedor_form_formulario {
+  }
+
+  .contenedor_form_formulario_titulo {
+  }
+
+  .contenedor_form_formulario_titulo_inputs {
+  }
+
+  .contenedor_form_formulario_titulo_inputs label {
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield {
+  }
+
+  .contenedor_form_formulario_titulo_inputs p-iconfield input {
+  }
+
+  .contenedor_form_formulario_titulo_inputs small {
+  }
+
+  .contenedor_form_formulario_titulo_extra {
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox {
+  }
+
+  .contenedor_form_formulario_titulo_extra_checkbox label {
+  }
+
+  .contenedor_form_formulario_titulo_extra_recuerda {
+  }
+
+  .contenedor_form_formulario_titulo_boton {
+  }
+
+  .contenedor_form_soporte {
+  }
+
+  .contenedor_form_soporte span {
+  }
+
+  .contenedor_form_footer {
   }
 }

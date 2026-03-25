@@ -3,19 +3,8 @@
   --card-width: 100%;
   --card-height: 100vh;
 
-  /* 🎨 Colores principales */
-  --color-primary: #f43f5e;
-  --color-primary-dark: #e11d48;
-  --color-secondary: #6c6e84;
-
-  --color-text-primary: #1c1008; /* Título principal */
-  --color-text-muted: #29292a; /* Texto secundario */
-  /* 📝 Tipografía */
-  --font-family-heading: 'Playfair Display', serif; /* Títulos elegantes */
-  --font-family-body: 'Lato', sans-serif; /* Cuerpo de texto */
-  --font-family-menu: 'Cormorant Garamond', serif; /* Carta / menú */
-
-
+  /* Tipografia*/
+  --type-letter: "Josefin Sans", sans-serif;
 }
 
 body,

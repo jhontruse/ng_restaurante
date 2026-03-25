@@ -1,94 +1,62 @@
-
 <div class="contenedor">
-  <div class="contenedorWallpaper">
-    <h1>Welcome Back</h1>
-    <p>Manage your restaurant with ease</p>
+  <div class="contenedor_wallpaper">
+    <p class="contenedor_Wallpaper_titulo">Welcome Back</p>
+    <p class="contenedor_Wallpaper_subtitulo">Manage your restaurant with ease</p>
   </div>
-  <div class="contenedorForm">
-    <svg class="svg-logo" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#ff4f8b"/>
-          <stop offset="100%" stop-color="#c2185b"/>
-        </linearGradient>
-      </defs>
+  <div class="contenedor_form">
+    <app-logo-principal></app-logo-principal>
 
-      <!-- Fondo -->
-      <rect x="0" y="0" width="128" height="128" rx="28" fill="url(#grad)"/>
+    <p class="contenedor_form_titulo">Restaurant JHONTRUSE</p>
 
-      <!-- Tenedor -->
-      <g fill="white">
-        <!-- dientes -->
-        <rect x="42" y="30" width="3" height="18" rx="1"/>
-        <rect x="47" y="30" width="3" height="18" rx="1"/>
-        <rect x="52" y="30" width="3" height="18" rx="1"/>
-        <rect x="57" y="30" width="3" height="18" rx="1"/>
+    <p class="contenedor_form_subtitulo">Management System</p>
+    <form class="contenedor_form_formulario" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <p class="contenedor_form_formulario_titulo">Iniciar Sesión</p>
 
-        <!-- mango -->
-        <rect x="48.5" y="48" width="4" height="40" rx="2"/>
-      </g>
+      <div class="contenedor_form_formulario_titulo_inputs">
+        <label for="username">Username</label>
+        <p-iconfield>
+          <p-inputicon styleClass="pi pi-user"/>
+          <input type="text" formControlName="username" class="form-input" pInputText placeholder="Ingresa tu usuario"/>
+          <p-inputicon [class]="isLoading ? 'pi pi-spin pi-spinner' : ''"/>
+        </p-iconfield>
+        <small id="username-help">Enter your username to reset your password.</small>
+      </div>
 
-      <!-- Cuchillo -->
-      <path
-        d="M75 30
-       C85 38 85 52 75 60
-       L75 90
-       C75 94 71 94 71 90
-       L71 30
-       Z"
-        fill="white"/>
-    </svg>
+      <div class="contenedor_form_formulario_titulo_inputs">
+        <label for="password">Password</label>
+        <p-iconfield>
+          <p-inputicon styleClass="pi pi-lock"/>
+          <input [type]="isPasswordVisible ? 'text' : 'password'"
+                 formControlName="password" pInputText
+                 placeholder="Ingresa tu password"/>
+          <p-inputicon [class]="isPasswordVisible ? 'pi pi-eye password' : 'pi pi-eye-slash'"
+                       (click)="visiblePassword()"
+                       style="cursor: pointer"/>
+        </p-iconfield>
+        <small id="password-help">Enter your password to reset your password.</small>
+      </div>
 
-    <p class="titulo">Restaurant JHONTRUSE</p>
-
-    <p class="subtitulo">Management System</p>
-    <div class="formulario">
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formularioLogin">
-        <div class="cont_1">
-          <p>Iniciar Sesión</p>
+      <div class="contenedor_form_formulario_titulo_extra">
+        <div class="contenedor_form_formulario_titulo_extra_checkbox">
+          <p-checkbox formControlName="checkbox" inputId="size_normal" name="size" value="small"/>
+          <label for="size_large" class="text-sm">Recuérdame</label>
         </div>
-        <div class="cont_2">
-          <label for="username">Username</label>
-          <p-iconfield>
-            <p-inputicon styleClass="pi pi-user"/>
-            <input type="text" formControlName="username" class="form-input" pInputText placeholder="Search"/>
-            <p-inputicon class="pi pi-spin pi-spinner"/>
-          </p-iconfield>
-          <small id="username-help">Enter your username to reset your password.</small>
-        </div>
+        <p class="contenedor_form_formulario_titulo_extra_recuerda" (click)="redireccion()">¿
+          Olvidaste tu contraseña ?</p>
+      </div>
 
-        <div class="cont_2">
-          <label for="password">Password</label>
-          <p-iconfield>
-            <p-inputicon styleClass="pi pi-lock"/>
-            <input type="text" formControlName="password" pInputText placeholder="Search"/>
-            <p-inputicon class="pi pi-eye"/>
-          </p-iconfield>
-          <small id="password-help">Enter your password to reset your password.</small>
-        </div>
+      <p-button class="contenedor_form_formulario_titulo_boton"
+                label="Ingresar" icon="pi pi-check" type="submit" iconPos="right" fluid="true"
+                [loading]="isLoading ? true : false"
+                [rounded]="false"
+                size="large"
+      />
 
-        <div class="cont_3">
-          <div>
-            <p-checkbox formControlName="checkbox" inputId="size_normal" name="size" value="small"/>
-            <label for="size_large" class="text-sm">Recuérdame</label>
-          </div>
-          <div><p> ¿ Olvidaste tu contraseña ?</p></div>
-        </div>
-
-        <div class="cont_4">
-          <p-button label="Save" icon="pi pi-check" type="submit" iconPos="right" fluid="true"
-                    loading="false"
-                    [rounded]="true"
-                    size="large"
-          />
-        </div>
-
-      </form>
-    </div>
-    <p class="soporte">¿Necesitas una cuenta?
+    </form>
+    <p class="contenedor_form_soporte">¿Necesitas una cuenta?
       <span>Contacta con el administrador</span>
     </p>
-    <p class="footer">© 2026 Restaurant JHONTRUSE. All rights reserved.</p>
+    <p class="contenedor_form_footer">© 2026 Restaurant JHONTRUSE. All rights reserved.</p>
 
 
   </div>
